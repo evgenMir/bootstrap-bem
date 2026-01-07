@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const zVersionMajorMinor = z.string().regex(/^\d+\.\d+$/)
+export const zVersionMajorMinor = z.string().regex(/^\d+(\.\d+)?$/)
 
 // https://ihateregex.io/expr/semver/
 const unboundSemverRegex =

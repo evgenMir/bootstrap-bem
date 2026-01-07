@@ -5,15 +5,9 @@ aliases: "/migration/"
 toc: true
 ---
 
-## v5.3.6
+## v5.0.0
 
-### Dependencies
-
-- Migrated from Hugo to Astro for building our documentation
-
-## v5.3.0
-
-If you’re migrating from our previous alpha releases of v5.3.0, please review their changes in addition to this section.
+If you're migrating from our previous releases, please review their changes in addition to this section.
 
 ### Helpers
 
@@ -23,9 +17,9 @@ If you’re migrating from our previous alpha releases of v5.3.0, please review 
 
 - Added new `.d-inline-grid` [display utility]([[docsref:/utilities/display]]).
 
-## v5.3.0-alpha2
+## v5.0.0-alpha2
 
-If you’re migrating from our previous alpha release of v5.3.0, please review the changes listed below.
+If you're migrating from our previous alpha release, please review the changes listed below.
 
 ### CSS variables
 
@@ -99,9 +93,9 @@ If you’re migrating from our previous alpha release of v5.3.0, please review t
 
 <hr class="mb-4"/>
 
-For a complete list of changes, [see the v5.3.0-alpha2 project on GitHub](https://github.com/orgs/twbs/projects/13).
+For a complete list of changes, [see the v5.0.0-alpha2 project on GitHub](https://github.com/orgs/twbs/projects/13).
 
-## v5.3.0-alpha1
+## v5.0.0-alpha1
 
 <hr class="mb-4"/>
 
@@ -178,7 +172,7 @@ Learn more by reading the new [color modes documentation]([[docsref:/customize/c
 
 ### Progress bars
 
-The markup for [progress bars]([[docsref:/components/progress]]) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
+The markup for [progress bars]([[docsref:/components/progress]]) has been updated in v5.0.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
 
 While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.
 
@@ -232,7 +226,7 @@ We’ve also introduced a new `.progress-stacked` class to more logically wrap [
 
 - <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> `.text-muted` will be replaced by `.text-body-secondary` in v6.
 
-  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.0.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 
 - Adds new `.overflow-x`, `.overflow-y`, and several `.object-fit-*` utilities. _The object-fit property is used to specify how an `<img>` or `<video>` should be resized to fit its container, giving us a responsive alternative to using `background-image` for a resizable fill/fit image._
 
@@ -242,7 +236,7 @@ We’ve also introduced a new `.progress-stacked` class to more logically wrap [
 
 - [Box shadow utilities]([[docsref:/utilities/shadows]]) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
-For a complete list of changes, [see the v5.3.0 project on GitHub](https://github.com/twbs/bootstrap/projects/).
+For a complete list of changes, [see the v5.0.0 project on GitHub](https://github.com/twbs/bootstrap/projects/).
 
 ## v5.2.0
 
