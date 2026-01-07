@@ -2,12 +2,8 @@ import type { HTMLAttributes } from 'astro/types'
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 
-export function getVersionedBsCssProps(direction: 'rtl' | undefined) {
+export function getVersionedBsCssProps() {
   let bsCssLinkHref = '/dist/css/bootstrap'
-
-  if (direction === 'rtl') {
-    bsCssLinkHref = `${bsCssLinkHref}.rtl`
-  }
 
   if (import.meta.env.PROD) {
     bsCssLinkHref = `${bsCssLinkHref}.min`
@@ -21,7 +17,7 @@ export function getVersionedBsCssProps(direction: 'rtl' | undefined) {
   }
 
   if (import.meta.env.PROD) {
-    bsCssLinkProps.integrity = direction === 'rtl' ? getConfig().cdn.css_rtl_hash : getConfig().cdn.css_hash
+    bsCssLinkProps.integrity = getConfig().cdn.css_hash
   }
 
   return bsCssLinkProps

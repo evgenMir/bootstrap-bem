@@ -10,7 +10,7 @@ import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
 import Manipulator from './dom/manipulator.js'
 import {
-  defineJQueryPlugin, execute, findShadowRoot, getElement, getUID, isRTL, noop
+  defineJQueryPlugin, execute, findShadowRoot, getElement, getUID, noop
 } from './util/index.js'
 import { DefaultAllowlist } from './util/sanitizer.js'
 import TemplateFactory from './util/template-factory.js'
@@ -50,9 +50,9 @@ const EVENT_MOUSELEAVE = 'mouseleave'
 const AttachmentMap = {
   AUTO: 'auto',
   TOP: 'top',
-  RIGHT: isRTL() ? 'left' : 'right',
+  RIGHT: 'right',
   BOTTOM: 'bottom',
-  LEFT: isRTL() ? 'right' : 'left'
+  LEFT: 'left'
 }
 
 const Default = {

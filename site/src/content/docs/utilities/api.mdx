@@ -22,7 +22,6 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 | [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |
 | `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]([[docsref:/getting-started/rfs]]). |
 | [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
-| `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
 </BsTable>
 
 ## API explained
@@ -592,30 +591,3 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities/api";
 ```
 
-#### Remove utility in RTL
-
-Some edge cases make [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the `rtl` option to `false`:
-
-```scss
-$utilities: (
-  "word-wrap": (
-    property: word-wrap word-break,
-    class: text,
-    values: (break: break-word),
-    rtl: false
-  ),
-);
-```
-
-Output:
-
-```css
-/* rtl:begin:remove */
-.text-break {
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-}
-/* rtl:end:remove */
-```
-
-This doesn’t output anything in RTL, thanks to [the RTLCSS `remove` control directive](https://rtlcss.com/learn/usage-guide/control-directives/#remove).

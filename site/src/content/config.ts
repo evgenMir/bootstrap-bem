@@ -9,7 +9,6 @@ const docsSchema = z.object({
     .optional(),
   aliases: z.string().or(z.string().array()).optional(),
   description: z.string(),
-  direction: z.literal('rtl').optional(),
   extra_js: z
     .object({
       async: z.boolean().optional(),

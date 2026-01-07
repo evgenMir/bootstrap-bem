@@ -12,7 +12,7 @@ import Backdrop from './util/backdrop.js'
 import { enableDismissTrigger } from './util/component-functions.js'
 import FocusTrap from './util/focustrap.js'
 import {
-  defineJQueryPlugin, isRTL, isVisible, reflow
+  defineJQueryPlugin, isVisible, reflow
 } from './util/index.js'
 import ScrollBarHelper from './util/scrollbar.js'
 
@@ -299,13 +299,11 @@ class Modal extends BaseComponent {
     const isBodyOverflowing = scrollbarWidth > 0
 
     if (isBodyOverflowing && !isModalOverflowing) {
-      const property = isRTL() ? 'paddingLeft' : 'paddingRight'
-      this._element.style[property] = `${scrollbarWidth}px`
+      this._element.style.paddingRight = `${scrollbarWidth}px`
     }
 
     if (!isBodyOverflowing && isModalOverflowing) {
-      const property = isRTL() ? 'paddingRight' : 'paddingLeft'
-      this._element.style[property] = `${scrollbarWidth}px`
+      this._element.style.paddingLeft = `${scrollbarWidth}px`
     }
   }
 

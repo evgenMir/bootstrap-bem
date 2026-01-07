@@ -16,13 +16,13 @@ Here are the variables we include (note that the `:root` is required) that can b
 
 These CSS variables are available everywhere, regardless of color mode.
 
-<Code lang="css" filePath="dist/css/bootstrap.css" fileMatch=":(root,\n\[data-bs-theme=light\] {[^}]*})" />
+<Code lang="css" filePath="dist/css/bootstrap.css" fileMatch='(:root,\[data-bs-theme="light"\]\{[^}]+?\})' />
 
 ### Dark mode
 
 These variables are scoped to our built-in dark mode.
 
-<Code lang="css" filePath="dist/css/bootstrap.css" fileMatch="(\[data-bs-theme=dark\] {[^}]*})" />
+<Code lang="css" filePath="dist/css/bootstrap.css" fileMatch='(\[data-bs-theme="dark"\]\{[^}]+?\})' />
 
 ## Component variables
 

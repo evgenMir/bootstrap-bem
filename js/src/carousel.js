@@ -12,7 +12,6 @@ import SelectorEngine from './dom/selector-engine.js'
 import {
   defineJQueryPlugin,
   getNextActiveElement,
-  isRTL,
   isVisible,
   reflow,
   triggerTransitionEnd
@@ -389,18 +388,10 @@ class Carousel extends BaseComponent {
   }
 
   _directionToOrder(direction) {
-    if (isRTL()) {
-      return direction === DIRECTION_LEFT ? ORDER_PREV : ORDER_NEXT
-    }
-
     return direction === DIRECTION_LEFT ? ORDER_NEXT : ORDER_PREV
   }
 
   _orderToDirection(order) {
-    if (isRTL()) {
-      return order === ORDER_PREV ? DIRECTION_LEFT : DIRECTION_RIGHT
-    }
-
     return order === ORDER_PREV ? DIRECTION_RIGHT : DIRECTION_LEFT
   }
 

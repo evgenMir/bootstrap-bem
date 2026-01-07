@@ -203,8 +203,6 @@ const onDOMContentLoaded = callback => {
   }
 }
 
-const isRTL = () => document.documentElement.dir === 'rtl'
-
 const defineJQueryPlugin = plugin => {
   onDOMContentLoaded(() => {
     const $ = getjQuery()
@@ -295,7 +293,6 @@ export {
   getUID,
   isDisabled,
   isElement,
-  isRTL,
   isVisible,
   noop,
   onDOMContentLoaded,

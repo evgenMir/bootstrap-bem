@@ -75,7 +75,6 @@
   }
 }
 
-/* rtl:begin:ignore */
 .bs-popover-end {
   > .popover-arrow {
     left: calc(-1 * (var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list
@@ -98,8 +97,6 @@
     }
   }
 }
-
-/* rtl:end:ignore */
 
 .bs-popover-bottom {
   > .popover-arrow {
@@ -134,7 +131,6 @@
   }
 }
 
-/* rtl:begin:ignore */
 .bs-popover-start {
   > .popover-arrow {
     right: calc(-1 * (var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list
@@ -157,8 +153,6 @@
     }
   }
 }
-
-/* rtl:end:ignore */
 
 .bs-popover-auto {
   &[data-popper-placement^="top"] {
